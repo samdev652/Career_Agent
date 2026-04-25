@@ -1,0 +1,24 @@
+# Root .gitignore for Job Scrapper Agent
+
+# Backend (Python/Django)
+backend/venv/
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/.env
+backend/db.sqlite3
+backend/media/
+backend/static/
+backend/staticfiles/
+
+# Frontend (Node/Next.js)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env*
+frontend/.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
