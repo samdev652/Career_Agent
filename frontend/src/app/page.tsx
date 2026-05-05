@@ -23,9 +23,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' && (window.location.port === '3000' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.startsWith('192.'))
-  ? "http://localhost:8000/api" 
-  : "/api");
+const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.startsWith('192.'));
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || (isLocal ? "http://localhost:8000/api" : "https://career-agent-b6i0.onrender.com/api");
 
 import Modal from '@/components/Modal';
 
